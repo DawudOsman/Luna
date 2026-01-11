@@ -195,7 +195,6 @@ struct WebtoonView: UIViewRepresentable {
                }
                
             }
-            print("SCROLLING AS STOPPED")
         }
         //get height
         func getHeightForSection(_ section: Int, collectionView: UICollectionView) -> CGFloat {
@@ -215,10 +214,8 @@ struct WebtoonView: UIViewRepresentable {
         // prepend Chapter
         func prependChapter(collectionView: UICollectionView)
         {
-            print("prependChapter called")
             if reader_manager.prevChapter.count > 0
             {
-                print("prevChap > 0 && loadingNext == false")
                 loadingPrevious = true
                 
                 // 🔧 FIX: Disable animations to prevent jumping
